@@ -4,6 +4,8 @@ var router = express.Router()
 // Require controller modules.
 var tokenController = require('../controllers/TokenController')
 
+// var gcp = require('../controllers/gcp')
+
 //	the client application makes an authorization request to the authorization
 //	Authorization = Basic
 //  grant_type=client_credentials
@@ -13,6 +15,7 @@ var tokenController = require('../controllers/TokenController')
 
 // Token
 // router.post('/token', middlewareRequest.validate)
+// router.get('/gcp', gcp)
 router.post('/token', tokenController.validateCredential)
 
 module.exports = router
