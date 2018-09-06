@@ -22,6 +22,10 @@ exports.validateCredential = async function(req, res, next) {
     res.json(200, {
         status: 'ok',
         code: 200,
-        data: { name: 'pongsak', lastname: 'prabparn' }
+        data: {
+            name: 'pongsak',
+            lastname: 'prabparn',
+            deploy: 'k8s'
+        }
     })
 }
