@@ -16,6 +16,9 @@ var tokenController = require('../controllers/TokenController')
 // Token
 // router.post('/token', middlewareRequest.validate)
 // router.get('/gcp', gcp)
+router.get('/', function(req, res) {
+    res.send('express k8s')
+})
 router.post('/token', tokenController.validateCredential)
 
 module.exports = router
